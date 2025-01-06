@@ -18,5 +18,6 @@ func HandleRequests() {
 	r.GET("/alunos/cpf/:cpf", controllers.BuscaAlunoPorCPF)
 
 	r.GET("/index", controllers.ExibePaginaIndex)
+	r.NoRoute(controllers.RotaNaoEncontrada)
 	r.Run()
 }
